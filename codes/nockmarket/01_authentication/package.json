@@ -3,8 +3,12 @@
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-      "express": "2.5.8"
+      "express": "4.13.3"
+      , "body-parser": "~1.0.0",
+      , "method-override": "~1.0.0"
+      ,  "errorhandler": "^1.1.1"
+      , "morgan": "^1.2.2",
     , "jade": "0.26.1"
-    , "mongoose": "2.6.5"
+    , "mongoose": "4.3.4"
   }
 }
