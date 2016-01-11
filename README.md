@@ -93,7 +93,7 @@ Poistetaan turhat Cloud 9 -ympäristöstä. Cloud tulee **Ubuntu**:lla, jossa on
 ```
 dpkg --get-selections | grep php
 dpkg --get-selections | grep python
-pkg --get-selections | grep jre
+dpkg --get-selections | grep jre
 ```
 Poistetaan ne, mitä ei tarvita. Tämä säästää tilaa ja nostaa serverin tehokkuutta. _Autoremove_ poistaa turhat pakkaukset ja siistii serverin
 ```
@@ -142,7 +142,7 @@ Kokeile uudestaan uudessa terminaalissa, onko tilanne muuttunut.
 
 Node perustuu Chrome v8 ajoaikaiseen. jos haluat mikä ajonaikainen versio on installoituna, saat sen selville: 
 ```
-node -p process.versions.v8
+node -p process.versions
   4.6.85.31
 ```
 
