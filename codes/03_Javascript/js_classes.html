@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Coffee Constructor</title>
+<script>
+
+function Coffee(roast, grams) {
+	this.roast = roast;
+	this.grams = grams;
+	this.getSize = function() {
+		if (this.grams === 250) {
+			return "small";
+		} else if (this.grams === 375) {
+			return "medium";
+		} else if (this.grams === 500) {
+			return "large";
+		}
+	};
+	this.order = function() {
+		var msg;
+		switch (this.getSize()) {
+			case "small":
+			case "medium":
+			case "large":
+				msg = "You've ordered a " + this.getSize() + " " + this.roast + " coffee.";
+				break;
+			default:
+				msg = "We don't have a " + this.roast + " in that size!";
+				break;
+		}
+		return msg;
+	};
+}
+
+var coffee = new Coffee("House Blend", 250);
+console.log(coffee.order());
+
+var darkRoast = new Coffee("Dark Roast", 500);
+console.log(darkRoast.order());
+
+var specialBlend = new Coffee("Special Blend", 1000);
+console.log(specialBlend.order());
+
+</script>
+</head>
+<body>
+</body>
+</html>
+
