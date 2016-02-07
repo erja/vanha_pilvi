@@ -1,0 +1,14 @@
+<html lang="en">
+    <head>
+        <title>Weather Forecast</title>
+        <script src="js/weather.js"></script>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        weather.setTown('Helsinki', function(data) {
+            console.log('TOWN: ' + JSON.stringify(data, null, 2));
+        });
+    </script>
+</html>
